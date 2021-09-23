@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sports Leagues</title>
+</head>
+
+<body>
+    <h1>Sports ORM I</h1>
+
+    <h3>1. Todas las ligas de béisbol:</h3>
+    {% for q in q1%}
+    <ul>
+        <li>{{q.0.name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>2. Todas las ligas de mujeres:</h3>
+    {% for q in q2%}
+    <ul>
+        <li>{{q.name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>3. Todas las ligas donde el deporte es cualquier tipo de hockey</h3>
+    {% for q in q3%}
+    <ul>
+        <li>{{q.name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>4. Todas las ligas donde el deporte no sea football</h3>
+    {% for q in q4%}
+    <ul>
+        <li>{{q.name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>5. Todas las ligas que se llaman "conferencias" (Conference)</h3>
+    {% for q in q5%}
+    <ul>
+        <li>{{q.name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>6. Todas las ligas de la región atlántica</h3>
+    {% for q in q6%}
+    <ul>
+        <li>{{q.name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>7. Todos los equipos con sede en Dallas</h3>
+    {% for q in q7%}
+    <ul>
+        <li>{{q.team_name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>8. Todos los equipos cuya ubicación incluye "Ciudad"</h3>
+    {% for q in q8%}
+    <ul>
+        <li>{{q.team_name}} - Ciudad: {{q.location}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>9. todos los equipos cuyos nombres comienzan con "T"</h3>
+    {% for q in q9%}
+    <ul>
+        <li>{{q.team_name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>10. Todos los equipos, ordenados alfabéticamente por ubicación</h3>
+    {% for q in q10%}
+    <ul>
+        <li>{{q.team_name}} - Ciudad: {{q.location}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>11. Todos los equipos, ordenados por nombre de equipo en orden alfabético inverso</h3>
+    {% for q in q11%}
+    <ul>
+        <li>{{q.team_name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>12. Cada jugador con apellido "Cooper"</h3>
+    {% for q in q12%}
+    <ul>
+        <li>{{q.first_name}} {{q.last_name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>13. Cada jugador con nombre "Joshua"</h3>
+    {% for q in q13%}
+    <ul>
+        <li>{{q.first_name}} {{q.last_name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>14. Todos los jugadores con el apellido "Cooper" EXCEPTO aquellos con "Joshua" como primer nombre</h3>
+    {% for q in q14%}
+    <ul>
+        <li>{{q.first_name}} {{q.last_name}}</li>
+    </ul>
+    {% endfor %}
+
+    <h3>15. Todos los jugadores con nombre "Alexander" O nombre "Wyatt"</h3>
+    {% for q in q15%}
+    <ul>
+        <li>{{q.first_name}} {{q.last_name}}</li>
+    </ul>
+    {% endfor %}
+    <a href="/">Subir</a>
+
+    <!-- <h1>Leagues</h1>
+		<ol>
+			{% for league in leagues %}
+				<li>{{league.name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>Teams</h1>
+		<ol>
+			{% for team in teams %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% empty %}
+				<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>Players</h1>
+		<ol>
+			{% for player in players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% empty %}
+				<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol> -->
+</body>
+
+</html>
